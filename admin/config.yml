@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: your-github-username/your-repository-name # ⚠️ Replace with your actual GitHub path
+  branch: main
+
+media_folder: "images" # Where your 5-axis engineering photos are saved
+public_folder: "images"
+
+collections:
+  - name: "impellers"
+    label: "Centrifugal Impeller Lineup"
+    folder: "content/products"
+    create: true # Allows clicking a button to add new products instantly
+    slug: "{{fields.model}}"
+    fields:
+      - { label: "Product Name / SEO Title", name: "title", widget: "string", default: "High-Efficiency Centrifugal Impeller" }
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Wheel Diameter Scope (mm)", name: "diameter", widget: "string" }
+      - { label: "Rotation Limit Integrity (RPM)", name: "rotation_speed", widget: "string", default: "20,000–100,000 RPM" }
+      - { label: "Material Composition", name: "material_profile", widget: "select", options: ["7075-T6 Aluminum Billet", "Premium Titanium Alloy", "Stainless Steel", "Carbon Steel"] }
+      - { label: "Main Product Photo", name: "image", widget: "image" }
+      - { label: "YouTube Verification Link", name: "youtube_link", widget: "string", required: false }
+      - { label: "CE Certification Status", name: "ce_certified", widget: "boolean", default: true }
+      - { label: "Technical Parameters & Body Content", name: "body", widget: "markdown" }
