@@ -1,28 +1,74 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>JC Blowers | CNC Impeller CMS Console</title>
-    <!-- 引入国内秒开的身份验证验证脚本 -->
-    </script>
-  </head>
-  <body>
-    <!-- 引入国内秒开的 CMS 后台核心加速脚本 -->
-    <script src="https://bytecdntp.com"></script>
-    
-    <!-- 激活登录自动跳转逻辑 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Blowers | 5-Axis CNC Impeller CMS Console</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: sans-serif; background-color: #0b1329; color: #f8fafc; padding: 2rem; line-height: 1.6; }
+        .admin-box { max-w: 800px; margin: 0 auto; background-color: #1c2541; border-top: 4px solid #00b4d8; padding: 2rem; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); }
+        h2 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #ffffff; display: flex; align-items: center; gap: 0.5rem; }
+        label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.35rem; font-weight: 600; }
+        .input-dark { width: 100%; background-color: #0b1329; border: 1px solid #3a506b; color: #ffffff; padding: 0.65rem; border-radius: 0.5rem; margin-bottom: 1.25rem; outline: none; font-size: 0.9rem; }
+        .input-dark:focus { border-color: #00b4d8; }
+        .btn-group { display: flex; gap: 1rem; margin-top: 0.5rem; }
+        .btn-publish { flex: 1; background-color: #00b4d8; color: #0b1329; border: none; padding: 0.75rem; border-radius: 0.5rem; font-weight: 700; cursor: pointer; font-size: 0.95rem; text-align: center; }
+        .btn-publish:hover { background-color: #0096c7; }
+        .btn-backup { background-color: #10b981; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+        .btn-backup:hover { background-color: #059669; }
+        .tip-box { background-color: rgba(0, 180, 216, 0.1); border: 1px solid rgba(0, 180, 216, 0.2); padding: 1rem; border-radius: 0.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: #00b4d8; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-box">
+        <h2>⚙️ JC Blowers 可视化产品管理后台 (CMS Console)</h2>
+        
+        <label>Product Name / SEO Title (产品名称/谷歌优化标题)</label>
+        <input type="text" id="prodName" class="input-dark" placeholder="e.g. High-Efficiency 5-Axis CNC Milling Centrifugal Impeller">
+
+        <label>Model Number (规格系列型号)</label>
+        <input type="text" id="prodModel" class="input-dark" placeholder="e.g. AT500 / AT700 / AT1200">
+
+        <label>Material Composition & Fleet Sourcing (材料与机床生产实力描述)</label>
+        <input type="text" id="prodMaterial" class="input-dark" placeholder="e.g. Premium 7075-T6 Aluminum Billet, Hexagon 3D CMM Calibration">
+
+        <label>Product Image Link (图床高清直链 - 更换为阿里的图床直链)</label>
+        <input type="text" id="prodImage" class="input-dark" placeholder="e.g. https://...png">
+
+        <label>Technical Parameters Description (五轴精密雕刻/参数详情描述)</label>
+        <textarea id="prodDesc" class="input-dark" rows="5" placeholder="Enter specifications here..." style="resize: none;"></textarea>
+
+        <div class="btn-group">
+            <button onclick="publishProduct()" class="btn-publish">➕ 立即上新商品 (Publish to Main)</button>
+            <button onclick="exportData()" class="btn-backup">💾 打包导出最新数据流</button>
+        </div>
+
+        <div class="tip-box">
+            📌 <strong>业务员操作提示：</strong> 输入完毕后，点击【打包导出最新数据流】复制生成的代码流。把代码发给技术人员或者直接粘贴进主页的 <code>products.json</code> 或 <code>index.html</code> 即可实现 1 秒全网极速上新！
+        </div>
+    </div>
+
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
+        function publishProduct() {
+            var name = document.getElementById('prodName').value;
+            if(!name) { alert('Please enter at least the product name!'); return; }
+            alert('商品就绪！请点击旁边的【打包导出最新数据流】按钮获取完整更新流。');
+        }
+        function exportData() {
+            var name = document.getElementById('prodName').value || 'Custom CNC Impeller';
+            var model = document.getElementById('prodModel').value || 'Custom Series';
+            var material = document.getElementById('prodMaterial').value || '7075 Aluminum';
+            var img = document.getElementById('prodImage').value || 'https://ibb.co';
+            var desc = document.getElementById('prodDesc').value || 'Aerospace grade 3D flow milling...';
+            
+            var dataObj = { name: name, series: model, material: material, image: img, description: desc };
+            var dataStr = JSON.stringify(dataObj, null, 4);
+            
+            prompt("复制下方的数据流代码，发给我或写进网页中即可永久发布更新：", dataStr);
+        }
     </script>
-  </body>
+
+</body>
 </html>
