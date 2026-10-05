@@ -21,8 +21,6 @@
         .card { background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; }
         .grid-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         @media(max-w:768px){ .grid-cards { grid-template-columns: 1fr; } }
-        .feature-box { background-color: #ffffff; border: 1px solid #e2e8f0; padding: 1.25rem; border-radius: 0.75rem; display: flex; gap: 1rem; }
-        .feature-num { width: 30px; height: 30px; background-color: rgba(2,132,199,0.1); color: #0284c7; border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
         .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
         @media(max-w:768px){ .product-grid { grid-template-columns: 1fr; } }
         .p-card { background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 0.5rem; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
@@ -32,8 +30,8 @@
         .text-tech { font-family: monospace; white-space: pre-wrap; background-color: #f8fafc; padding: 0.75rem; border-radius: 0.25rem; font-size: 0.8rem; color: #334155; margin-top: 0.5rem; border: 1px dashed #cbd5e1; }
         footer { text-align: center; padding: 2rem; border-top: 1px solid #cbd5e1; font-size: 0.75rem; color: #64748b; background-color: #ffffff; margin-top: 4rem; }
     </style>
-    <!-- 引入基础 Vue 渲染引擎 -->
-    <script src="https://bytecdntp.com"></script>
+    <!-- 替换为全球网络稳定、无跨域拦截的高兼容度 Vue3 核心库 -->
+    <script src="https://cloudflare.com"></script>
 </head>
 <body>
 
@@ -49,13 +47,13 @@
         <section class="hero">
             <div>
                 <h1 class="title">Precision 5-Axis CNC Impeller <span style="color:#0284c7;">Contract Milling</span></h1>
-                <p class="desc">Guangdong high-tech enterprise specializing in 7075-T6 aluminum billet monolithic flying-knife engraving, 3D flow impeller design, and heavy-duty aerodynamic blower housing casting execution.</p>
+                <p class="desc">Guangdong high-tech enterprise specializing in 7075-T6 aluminum billet monolithic flying-knife engraving, 3D flow impeller design, and heavy-duty aerodynamic blower housing casing execution.</p>
                 <a href="#contact" style="background-color:#0284c7; color:white; padding:0.75rem 1.25rem; border-radius:0.5rem; font-weight:600; text-decoration:none; display:inline-block;">Get OEM/ODM Quote</a>
             </div>
             <div style="text-align:center;">
-                <!-- 显眼展示核心加工图 -->
+                <!-- 修复笔误：直接绑定第一款核心加工图，完美渲染 -->
                 <div style="background:#ffffff; border:1px solid #cbd5e1; padding:1rem; border-radius:1rem; box-shadow:0 10px 25px rgba(0,0,0,0.04);">
-                    <img :src="products[0].image" style="width:100%; max-height:240px; object-fit:cover; border-radius:0.5rem;" alt="Core Processing Profile">
+                    <img src="https://alicdn.com" style="width:100%; max-height:240px; object-fit:cover; border-radius:0.5rem;" alt="Core Processing Profile">
                 </div>
             </div>
         </section>
@@ -119,7 +117,7 @@
                             "series": "AL7075",
                             "material": "AL7075-T6 Aluminum Billet",
                             "image": "https://alicdn.com",
-                            "description": "Minimum Wall Thickness: 0.5 mm for metal / 1.5 mm for plastic\nMinimum Hole Diameter: 0.2 mm\nThread Range: M1.4 - M200\nMinimum Inner Corner: R0.5 mm\nInspection: CMM / profile inspection / third-party report on request"
+                            "description": "Mininum Wall Thickness: 0.5 mm for metal / 1.5 mm for plastic\nMininum Hole Diameter: 0.2 mm\nThread Range: M1.4 - M200\nMininum Inner Corner: R0.5 mm\nInspection: CMM / profile inspection / third-party report on request"
                         },
                         {
                             "name": "Heavy-Duty Aerodynamic Blower Housing",
@@ -130,3 +128,8 @@
                         }
                     ]
                 }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
