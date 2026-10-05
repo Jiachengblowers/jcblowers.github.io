@@ -3,107 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JC Blowers | Premium Centrifugal Impeller Manufacturer</title>
+    <title>5-Axis CNC Impeller Factory & Custom Blower Housing Manufacturer | JC Blowers</title>
+    <meta name="description" content="Guangdong premium contract manufacturing factory specializing in precision 5-axis CNC impeller milling and heavy-duty blower housing casing. Equipped with 16 advanced 5-axis CNC milling centers and Hexagon CMM quality dimensional verification. Contact us for custom OEM/ODM specifications.">
+    <!-- 引入全球高速静态加速样式库，确保海内外 1 秒秒开 -->
+    <script src="https://bytecdntp.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0a192f;       /* Deep Aero Navy */
-            --accent: #ff5722;        /* Engineering Orange */
-            --dark: #111827;
-            --light-bg: #f9fafb;
-            --border: #e5e7eb;
-        }
-
-        body {
-            margin: 0; font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-            color: var(--dark); line-height: 1.6;
-        }
-
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
-
-        /* Navigation Framework */
-        .navbar { background-color: var(--primary); color: #ffffff; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 800; text-transform: uppercase; }
-        .logo span { color: var(--accent); }
-
-        /* Industrial Hero Layout */
-        .hero { 
-            background: linear-gradient(rgba(10, 25, 47, 0.93), rgba(10, 25, 47, 0.93)), 
-                        url('https://unsplash.com') no-repeat center center/cover;
-            color: #ffffff; padding: 100px 0; text-align: center; 
-        }
-
-        .hero h1 { font-size: 42px; text-transform: uppercase; margin: 0 0 20px 0; }
-
-        /* Responsive Multi-Column Product Display Matrix */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 50px; }
-        .product-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
-        
-        .img-box { background-color: #e5e7eb; height: 230px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px; position: relative; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; }
-        .badge { position: absolute; top: 15px; left: 15px; background: var(--accent); color: #fff; padding: 4px 8px; font-size: 11px; font-weight: 700; border-radius: 2px; }
-
-        .specs-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13.5px; }
-        .specs-table tr { border-bottom: 1px solid #f3f4f6; }
-        .specs-table td { padding: 8px 0; }
-        .specs-table td.lbl { font-weight: 600; color: var(--primary); }
-
-        .btn-vid { background: #cc181e; color: #fff; text-align: center; padding: 10px; display: block; text-decoration: none; border-radius: 4px; font-weight: 600; margin-bottom: 10px; font-size: 14px; }
-        .btn-quote { background: var(--primary); color: #fff; text-align: center; padding: 10px; display: block; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 14px; }
-
-        .footer { background: #060f1e; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 14px; margin-top: 80px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #f0f4f8 !important; color: #1e293b !important; line-height: 1.5; }
+        header { background-color: #ffffff !important; border-bottom: 1px solid #cbd5e1 !important; padding: 1rem 1.5rem; position: sticky; top: 0; z-index: 50; }
+        .nav-container { max-w: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #0f172a; }
+        .logo span { color: #0284c7; }
+        .btn-email-top { background-color: #0284c7 !important; color: white !important; padding: 0.65rem 1.35rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; font-size: 0.875rem; box-shadow: 0 4px 6px rgba(2,132,199,0.2); display: inline-flex; align-items: center; gap: 0.5rem; }
+        .container { max-w: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 3rem; }
+        @media(max-w: 768px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-m-box { margin-top: 2rem; } }
+        .title { font-size: 2.2rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem; line-height: 1.2; }
+        .desc { color: #475569; margin-bottom: 1.5rem; }
+        .card { background-color: #fff !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .grid-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        @media(max-w: 768px) { .grid-cards { grid-template-columns: 1fr; } }
+        .feature-box { background-color: #fff !important; border: 1px solid #e2e8f0 !important; padding: 1.25rem; border-radius: 0.75rem; display: flex; gap: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.01); }
+        .feature-num { width: 30px; height: 30px; background-color: rgba(2, 132, 199, 0.1); color: #0284c7; border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        @media(max-w: 1024px) { .product-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-w: 640px) { .product-grid { grid-template-columns: 1fr; } }
+        .p-card { background-color: #fff !important; border: 1px solid #cbd5e1 !important; border-radius: .5rem; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .img-box { height: 140px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.375rem; margin-bottom: 0.75rem; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .img-real { width: 100%; height: 100%; object-fit: cover; }
+        .hero-m-box { width: 100%; max-w: 440px; height: 280px; background-color: #fff; border-radius: 1rem; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px rgba(0,0,0,0.04); overflow: hidden; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+        .badge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .badge-premium { background-color: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0284c7; padding: 0.5rem 0.75rem; border-radius: 0.375rem; font-size: 0.8rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 0.35rem; }
+        .rfq-banner { background-color: #0f172a !important; color: white !important; border: 1px solid #1e293b !important; padding: 2.5rem; border-radius: 1rem; text-align: center; text-decoration: none; display: block; box-shadow: 0 10px 25px rgba(15,23,42,0.15); border-top: 4px solid #0284c7 !important; transition: all 0.3s ease; }
+        .rfq-banner:hover { background-color: #1e293b !important; border-color: #0284c7 !important; transform: translateY(-2px); }
+        footer { text-align: center; padding: 2rem; border-top: 1px solid #cbd5e1; font-size: 0.75rem; color: #64748b; background-color: #fff; margin-top: 4rem; }
     </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">JC <span>Blowers</span></div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Premium Centrifugal Impeller Sourcing</h1>
-            <p>Guangdong Contract Manufacturer Specializing in 5-Axis Milling Integrity for Global Turbomachinery Supply Chains.</p>
+    <header>
+        <div class="nav-container">
+            <div class="logo">JC <span>BLOWERS</span></div>
+            <nav style="display: flex; gap: 1.5rem; font-size: 0.85rem; font-weight: 600; color: #475569;" class="hidden md:flex">
+                <a href="#about">Machinery Shop</a>
+                <a href="#features">Core Technology</a>
+                <a href="#machining">Aerospace Milling</a>
+                <a href="#products">OEM Families</a>
+                <a href="#contact">Contact RFQ</a>
+            </nav>
+            <div><a href="mailto:info@://jcblowers.com Inquiry & Blueprint from Website" class="btn-email-top">✉️ info@jcblowers.com</a></div>
         </div>
     </header>
-
-    <main class="container" style="padding: 60px 0;">
-        <div style="text-align: center;">
-            <h2 style="font-size: 32px; color: var(--primary); text-transform: uppercase;">Aerodynamic Hardware Portfolio</h2>
-            <p style="color: #666;">Select an aerodynamic equipment profile below to initiate a benchmark blueprint calculation.</p>
-        </div>
-
-        <div class="product-grid">
-            <!-- PRODUCT PROFILE GRID ITEM 1 -->
-            <div class="product-card">
-                <div class="img-box">
-                    <span class="badge">7075-T6 Billet</span>
-                    <img src="https://unsplash.com" alt="Centrifugal Impeller Machine Profile">
+    <main class="container">
+        <section class="hero">
+            <div>
+                <div class="badge-grid">
+                    <div class="badge-premium"><span>⚡</span> 16x Advanced 5-Axis CNC Lines</div>
+                    <div class="badge-premium" style="border-left-color: #10b981;"><span>📐</span> Hexagon CMM Verified</div>
                 </div>
-                <h3 style="margin-top: 15px;">High-Efficiency Centrifugal Impeller</h3>
-                <div style="color: var(--accent); font-weight: 600; font-size: 14px;">Model: JCB-3DIMP-01</div>
-                
-                <table class="specs-table">
-                    <tr><td class="lbl">Milling Configuration:</td><td>5-Axis Single-Pass Monoblock</td></tr>
-                    <tr><td class="lbl">Material Baseline:</td><td>7075-T6 Aluminum / Titanium</td></tr>
-                    <tr><td class="lbl">Rotation Limit:</td><td>20,000 – 100,000 RPM</td></tr>
-                    <tr><td class="lbl">Verification System:</td><td>Hexagon CMM Profiling Log</td></tr>
-                </table>
-
-                <a href="https://youtube.com" target="_blank" class="btn-vid">🔴 Watch Video Demonstration</a>
-                <a href="mailto:info@://jcblowers.com Inquiry: Model JCB-3DIMP-01" class="btn-quote">Get Sourcing Quotation</a>
+                <h1 class="title">Precision 5-Axis CNC Impeller & Heavy-Duty Blower Housing <span style="color: #0284c7;">Contract Manufacturer</span></h1>
+                <p class="desc">Guangdong provincial High-Tech Enterprise equipped with state-of-the-art CNC milling workshops and Hexagon metric calibration labs. We deliver aerospace-grade 3D flow impellers and heavy-duty volute shells with zero aerodynamic loss.</p>
+                <a href="#contact" style="background-color: #0284c7; color: white; padding: 0.75rem 1.25rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block;">Submit Blueprints For 12H Quote</a>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Guangdong Jiachengblowers Fluid Technology Co., Ltd. | Email: info@jcblowers.com</p>
-            <p style="font-size: 12px; color: #475569; margin-top: 10px;">Copyright © 2026 JC Blowers. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <div class="hero-visual-wrapper">
+                <div class="hero-m-box"><img src="https://ibb.co" class="img-real" alt="JC 16x 5-Axis Precision CNC Machined Impeller"></div>
+            </div>
+        </section>
+        <section style="margin-bottom: 4rem;" id="about">
+            <h2 style="font-size: 1.75rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Why Global Sourcing Directors Partner with JC Blowers?</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h4>🏭 Serialized OEM/ODM Contract Manufacturer</h4>
+                    <p style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Guangdong Jiachengblowers Fluid Technology Co., Ltd. runs an ultra-modern 5-axis CNC machining center. ISO9001 & CE Certified. Main backbone supplier proudly trusted by BYD, Foxconn, CATL, Volkswagen, Audi, Sinopec, and COFCO.</p>
+                </div>
+                <div class="card">
+                    <h4>⚡ High-Volume Production & Rapid Prototyping</h4>
+                    <p style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Backed by our fleet of 16 advanced 5-axis synchronous machining centers and a dedicated dynamic balancing testing center, we compress confidential prototyping lead times to just 7-10 days.</p>
+                </div>
+            </div>
+        </section>
+        <section style="margin-bottom: 4rem;" id="features">
+            <h2 style="font-size: 1.75rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Aerospace-Grade Technical Standards</h2>
+            <div class="grid-cards">
+                <div class="feature-box">
+                    <div class="feature-num">01</div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700;">16x Synchronous 5-Axis Milling Centers</h4>
+                        <p style="font-size: 0.85rem; color: #475569;">Our serialized fleet of 16 advanced 5-axis synchronous milling centers ensures that dynamic balancing tolerances are continuously strictly controlled, eliminating micro-vibrations.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-num">02</div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700;">Hexagon 3D CMM Micro-Calibration</h4>
+                        <p style="font-size: 0.85rem; color: #475569;">Equipped with Swiss Hexagon three-dimensional CMM measurement systems to perform strict geometric parameter scans down to the micrometer scale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-bottom: 4rem;" id="machining">
+            <h2 style="font-size: 1.75rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Precision CNC Machining Shop Floor Overview</h2>
+            <div class="grid-cards">
+                <div class="card" style="border-top: 4px solid #0284c7;">
