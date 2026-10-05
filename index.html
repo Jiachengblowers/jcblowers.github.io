@@ -26,8 +26,17 @@
         .p-card { background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 0.5rem; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .img-box { height: 220px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.375rem; margin-bottom: 0.75rem; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .img-real { width: 100%; height: 100%; object-fit: cover; }
-        .c-box { background-color: #ffffff; border: 1px solid #cbd5e1; padding: 1.5rem; border-radius: 0.5rem; text-align: center; text-decoration: none; display: block; margin-top: 2rem; }
+        .c-box { background-color: #ffffff; border: 1px solid #cbd5e1; padding: 2rem; border-radius: 0.75rem; text-align: left; margin-top: 2rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
         .text-tech { font-family: monospace; white-space: pre-wrap; background-color: #f8fafc; padding: 0.75rem; border-radius: 0.25rem; font-size: 0.8rem; color: #334155; margin-top: 0.5rem; border: 1px dashed #cbd5e1; text-align: left; }
+        
+        /* 表单高级科技蓝样式 */
+        .form-group { margin-bottom: 1.25rem; }
+        .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem; }
+        .form-input { width: 100%; border: 1px solid #cbd5e1; padding: 0.65rem; border-radius: 0.375rem; font-size: 0.9rem; outline: none; }
+        .form-input:focus { border-color: #0284c7; box-shadow: 0 0 0 3px rgba(2,132,199,0.1); }
+        .btn-submit { background-color: #0284c7; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.375rem; font-weight: 700; cursor: pointer; font-size: 0.95rem; width: 100%; transition: background 0.2s; }
+        .btn-submit:hover { background-color: #0369a1; }
+        
         footer { text-align: center; padding: 2rem; border-top: 1px solid #cbd5e1; font-size: 0.75rem; color: #64748b; background-color: #ffffff; margin-top: 4rem; }
     </style>
 </head>
@@ -50,7 +59,6 @@
             </div>
             <div style="text-align:center;">
                 <div style="background:#ffffff; border:1px solid #cbd5e1; padding:1rem; border-radius:1rem; box-shadow:0 10px 25px rgba(0,0,0,0.04);">
-                    <!-- 替换为高速开源五轴机械手臂加工图 -->
                     <img src="https://unsplash.com" style="width:100%; max-height:240px; object-fit:cover; border-radius:0.5rem;" alt="Core Processing Profile">
                 </div>
             </div>
@@ -76,7 +84,6 @@
             <h2 style="font-size:1.75rem; font-weight:700; text-align:center; margin-bottom:1.5rem;">Focused Contract Manufacturing Families</h2>
             
             <div class="product-grid">
-                <!-- 产品 1：精密叶轮（已换上全球加速高清工业叶轮雕刻大图） -->
                 <div class="p-card">
                     <div>
                         <div class="img-box">
@@ -93,7 +100,6 @@ Inspection: CMM / profile inspection / third-party report on request</div>
                     <a href="#contact" style="background-color:#f1f5f9; color:#0f172a; padding:0.6rem; border-radius:0.375rem; font-size:0.8rem; font-weight:600; border:1px solid #cbd5e1; text-decoration:none; text-align:center; margin-top:1rem; display:block;">Inquire For Processing Tolerance</a>
                 </div>
 
-                <!-- 产品 2：风机外壳加工线（已换上全网公开无拦截的重工业高端铣削设备大图） -->
                 <div class="p-card">
                     <div>
                         <div class="img-box">
@@ -108,17 +114,9 @@ Inspection: CMM / profile inspection / third-party report on request</div>
             </div>
         </section>
 
-        <!-- Section 4: B2B Contact Info Section -->
+        <!-- Section 4: 升级版 B2B 大厂专属询盘表单（打通 info@jcblowers.com 数据流） -->
         <section id="contact" class="c-box">
-            <h3 style="font-size:1.5rem; font-weight:700; margin-bottom:0.5rem;">Connect with Our Engineering Team Directly</h3>
-            <p style="color:#475569; font-size:0.9rem; margin-bottom:1rem;">Submit your detailed CAD/STEP blueprints or blower specifications for immediate manufacturing assessment.</p>
-            <p style="font-size:1.2rem; font-weight:700; color:#0284c7;">✉️ Official Corporate Email: info@jcblowers.com</p>
-            <p style="font-size:0.8rem; color:#64748b; margin-top:0.5rem;">🏭 Factory Compliance Site: Dongguan, Guangdong, China | OEM & ODM Closed-loop Sourcing</p>
-        </section>
-    </main>
-
-    <footer>
-        © 2026 JC Environmental Protection Technology Co., Ltd. All rights reserved. Precision 5-Axis CNC Contract Sourcing Portal.
-    </footer>
-</body>
-</html>
+            <div style="max-width: 650px; margin: 0 auto;">
+                <h3 style="font-size:1.6rem; font-weight:700; margin-bottom:0.5rem; text-align: center; color:#0f172a;">Request a Technical Manufacturing Quote</h3>
+                <p style="color:#64748b; font-size:0.9rem; margin-bottom:2rem; text-align: center;">Submit your custom 5-axis CNC processing specs or blower housing requirements. Our engineering fleet will reply within 12 hours.</p>
+                
