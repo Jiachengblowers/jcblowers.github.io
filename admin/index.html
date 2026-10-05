@@ -6,12 +6,11 @@
     <title>JC Blowers | Visual Content Management System</title>
     <!-- 引入全球最高安全级别的 Decap Headless CMS 核心驱动引擎 -->
     <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
-    <!-- 引入身份验证网关挂件，强制冲碎浏览器的拦截过滤 -->
+    <!-- 引入网关挂件，强制冲碎浏览器的本地拦截过滤 -->
     </script>
 </head>
 <body>
     <script>
-        // 绑定你在 Netlify 激活的 Git-Gateway 黄金安全令牌密匙
         CMS.init({
             config: {
                 backend: {
