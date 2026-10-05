@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JC Blowers | Turbomachinery Content Management Panel</title>
-  <!-- Load high-speed Global CMS Delivery Network styles -->
-  <link rel="stylesheet" href="https://unpkg.com@^4.0.0/dist/main.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JC Blowers | Visual Content Management System</title>
+    <!-- 引入全球安全的 Decap Headless CMS 核心驱动引擎 -->
+    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- App framework container -->
-  <script src="https://unpkg.com@^4.0.0/dist/static-cms.js"></script>
+    <script>
+        // 绑定你在 Netlify 激活的 Git-Gateway 专属可视化后台数据库令牌
+        CMS.init({
+            config: {
+                backend: {
+                    name: 'git-gateway',
+                    branch: 'main'
+                },
+                media_folder: 'images',
+                public_folder: '/images',
+                collections: [
+                    {
+                        name: 'products',
+                        label: 'Industrial Products Portfolio',
+                        folder: '_products',
+                        create: true,
+                        slug: '{{slug}}',
+                        fields: [
+                            {label: 'Product Title', name: 'title', widget: 'string'},
+                            {label: 'Model Number', name: 'model', widget: 'string'},
+                            {label: 'Milling Configuration', name: 'milling', widget: 'string', default: '5-Axis Single Pass Monoblock'},
+                            {label: 'Material Baseline', name: 'material', widget: 'string', default: '7075 T6 Aluminum / Titanium'},
+                            {label: 'Rotation Speed Limit', name: 'rotation', widget: 'string', default: '20,000 - 100,000 RPM'},
+                            {label: 'Verification Metric', name: 'verification', widget: 'string', default: 'Hexagon CMM Profiling Log'},
+                            {label: 'Cover Image', name: 'image', widget: 'image'},
+                            {label: 'Detailed Specifications', name: 'body', widget: 'markdown'}
+                        ]
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 </html>
